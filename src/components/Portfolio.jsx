@@ -7,30 +7,31 @@ const Portfolio = () => {
 
   const categories = ["All", "Event", "Business"];
 
+  // ✅ gambar diambil dari folder public
   const projects = [
     {
       title: "Event Kesehatan dan Workshop bersama Komunitas dan Instansi.",
       description: "AI-powered shopping platform with real-time analytics",
-      image: "/src/assets/Cafe.jpeg",
+      image: "/Cafe.jpeg",
       category: "Event",
     },
     {
       title: "Cafe and Lifestyle Event",
       description: "Next-gen banking with biometric authentication",
-      image: "/src/assets/Cafe.jpeg",
+      image: "/Cafe.jpeg",
       category: "Business",
     },
     {
-      title: "Opening and Branding fot Local Business",
+      title: "Opening and Branding for Local Business",
       description: "Large-scale infrastructure transformation",
-      image: "/src/assets/Cafe.jpeg",
+      image: "/Cafe.jpeg",
       category: "Event",
     },
   ];
 
   return (
     <section className="relative py-32 bg-slate-50">
-      {/* Gradient background */}
+      {/* Background animasi */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute w-full h-full">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-violet-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
@@ -40,7 +41,7 @@ const Portfolio = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-5xl font-bold tracking-tight text-slate-900 lg:text-6xl">
             Proyek Selesai
@@ -53,7 +54,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Category filters */}
+        {/* Filter kategori */}
         <div className="mt-12 flex flex-wrap justify-center gap-4">
           {categories.map((category) => (
             <button
@@ -70,7 +71,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Projects grid */}
+        {/* Grid project */}
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
           {projects
             .filter(
@@ -82,7 +83,7 @@ const Portfolio = () => {
                 key={project.title}
                 className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500"
               >
-                {/* Project image */}
+                {/* Gambar project */}
                 <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl">
                   <LazyImage
                     src={project.image}
@@ -91,7 +92,7 @@ const Portfolio = () => {
                   />
                 </div>
 
-                {/* Project info */}
+                {/* Info project */}
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="inline-flex items-center rounded-full bg-violet-50 px-3 py-1 text-sm font-medium text-violet-600">
