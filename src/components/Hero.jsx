@@ -35,14 +35,14 @@ const Hero = () => {
           {/* Kanan: Gambar */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/src/assets/Cafe.jpeg"
+              src="/Cafe.jpeg" // ✅ ambil dari folder public
               alt="Company Profile"
               className="w-full max-w-md rounded-2xl shadow-lg"
             />
           </div>
         </div>
 
-        {/* Tombol CTA pindah ke bawah */}
+        {/* Tombol CTA */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-12">
           <button className="px-8 py-4 rounded-full bg-slate-900 text-white font-medium hover:shadow-lg hover:shadow-slate-900/10 transition-all duration-300 transform hover:-translate-y-0.5 group inline-flex items-center">
             <a href="https://wa.me/6281997690650">Hubungi Kami</a>
